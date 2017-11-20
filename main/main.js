@@ -1,12 +1,12 @@
-window.onload = function () {
-    document.getElementById("anniu").onclick = function () {
+window.onload = function() {
+    document.getElementById("anni").onclick = function() {
         main();
     };
 };
 
 function main() {
     let sum = calc1()+calc2()+calc3()+calc4()+calc5();
-    let res = document.getElementsByName("name").value + '本次测验的得分是：' + sum.toString() + "分";
+    let res = document.getElementById("xingming").value + '本次测验的得分是：' + sum.toString() + "分";
     alert(res);
 }
 
@@ -40,7 +40,7 @@ function calc2() {
 
 function calc3() {
     let sum = 0;
-    let checkboxlist = document.getElementById("disanti").getElementsByTagName("input");
+    let checkboxlist= document.getElementById("third").getElementsByTagName("input");
     if (checkboxlist[0].checked === true && checkboxlist[1].checked === true && checkboxlist[2].checked===false && checkboxlist[3].checked===true){
         sum += 10;
     }
@@ -63,7 +63,7 @@ function calc4() {
 function calc5() {
     let sum = 0;
     const str = '模型是对现实世界是简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以是某种图形；或者是一种数学表达式。';
-    if(document.getElementById("fifth1").value = str){
+    if(document.getElementById("fifth").value = str){
         sum += 20;
     }
     return sum;
