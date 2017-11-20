@@ -58,6 +58,7 @@ function calc4() {
     if(document.getElementById("fouth2").checked === true){
         sum += 10;
     }
+    return sum;
 }
 
 function calc5() {
